@@ -125,7 +125,7 @@
             #binding-cells = <0>;
             bindings = <&kp W>, <&to 4>;
 
-            tapping-term-ms = <215>;
+            tapping-term-ms = <214>;
         };
     };
 
