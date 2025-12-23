@@ -26,6 +26,8 @@
             label = "ZEROTBDUNDERSCORE";
             #binding-cells = <0>;
             bindings = <&kp N0>, <&kp LS(MINUS)>;
+
+            tapping-term-ms = <180>;
         };
 
         TD_PLUS_BSLASH_QMARK_GRAVE: TD_PLUS_BSLASH_QMARK_GRAVE {
@@ -41,7 +43,8 @@
             bindings = <&mo>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <100>;
+            tapping-term-ms = <200>;
+            flavor = "tap-preferred";
         };
 
         TD_lvl_e_item_3: TD_lvl_e_item_3 {
@@ -113,7 +116,7 @@
             #binding-cells = <0>;
             bindings = <&kp Q>, <&to 3>;
 
-            tapping-term-ms = <190>;
+            tapping-term-ms = <180>;
         };
 
         TD_w_dev: TD_w_dev {
@@ -122,7 +125,7 @@
             #binding-cells = <0>;
             bindings = <&kp W>, <&to 4>;
 
-            tapping-term-ms = <190>;
+            tapping-term-ms = <180>;
         };
     };
 
