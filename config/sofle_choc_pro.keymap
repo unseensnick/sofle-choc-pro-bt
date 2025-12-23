@@ -107,20 +107,20 @@
             tapping-term-ms = <190>;
         };
 
-        TD_1_league: TD_1_league {
+        TD_q_league: TD_q_league {
             compatible = "zmk,behavior-tap-dance";
-            label = "TD_1_LEAGUE";
+            label = "TD_Q_LEAGUE";
             #binding-cells = <0>;
-            bindings = <&kp NUMBER_1>, <&to 3>;
+            bindings = <&kp Q>, <&to 3>;
 
             tapping-term-ms = <190>;
         };
 
-        TD_2_dev: TD_2_dev {
+        TD_w_dev: TD_w_dev {
             compatible = "zmk,behavior-tap-dance";
-            label = "TD_2_DEV";
+            label = "TD_W_DEV";
             #binding-cells = <0>;
-            bindings = <&kp NUMBER_2>, <&to 4>;
+            bindings = <&kp W>, <&to 4>;
 
             tapping-term-ms = <190>;
         };
@@ -149,11 +149,11 @@
             //               | GUI | ALT  | CTRL | LOWER|  ENTER |  | SPACE | RAISE| CTRL  | ALT   | GUI  |
 
             bindings = <
-&kp ESCAPE    &TD_1_league  &TD_2_dev  &kp N3    &kp N4     &kp N5                                               &kp N6     &kp N7   &kp N8     &kp N9     &zeroTBDUnderscore  &TD_PLUS_BSLASH_QMARK_GRAVE
-&kp TAB       &kp Q         &kp W      &kp E     &kp R      &kp T                     &kp Y                                 &kp U    &kp I      &kp O      &kp P               &kp LEFT_BRACKET
-&kp CAPSLOCK  &kp A         &kp S      &kp D     &kp F      &kp G                     &kp H                                 &kp J    &kp K      &kp L      &kp SEMI            &kp SQT
-&kp LSHFT     &kp Z         &kp X      &kp C     &kp V      &kp B                     &kp C_MUTE     &kp C_PLAY  &kp N      &kp M    &kp COMMA  &kp DOT    &kp FSLH            &kp NON_US_HASH
-                            &kp LALT   &kp LGUI  &kp LCTRL  &MO_space_numpad 2 SPACE  &kp BACKSPACE  &kp ENTER   &kp SPACE  &kp DEL  &kp RALT   &kp RCTRL
+&kp ESCAPE    &kp NUMBER_1  &kp NUMBER_2  &kp N3    &kp N4     &kp N5                                               &kp N6     &kp N7   &kp N8     &kp N9     &zeroTBDUnderscore  &TD_PLUS_BSLASH_QMARK_GRAVE
+&kp TAB       &TD_q_league  &TD_w_dev     &kp E     &kp R      &kp T                     &kp Y                                 &kp U    &kp I      &kp O      &kp P               &kp LEFT_BRACKET
+&kp CAPSLOCK  &kp A         &kp S         &kp D     &kp F      &kp G                     &kp H                                 &kp J    &kp K      &kp L      &kp SEMI            &kp SQT
+&kp LSHFT     &kp Z         &kp X         &kp C     &kp V      &kp B                     &kp C_MUTE     &kp C_PLAY  &kp N      &kp M    &kp COMMA  &kp DOT    &kp FSLH            &kp NON_US_HASH
+                            &kp LALT      &kp LGUI  &kp LCTRL  &MO_space_numpad 2 SPACE  &kp BACKSPACE  &kp ENTER   &kp SPACE  &kp DEL  &kp RALT   &kp RCTRL
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp C_PREV C_NEXT>;
@@ -173,7 +173,7 @@
 &ext_power EP_TOG  &rgb_ug RGB_HUD  &rgb_ug RGB_HUI  &rgb_ug RGB_SAD  &rgb_ug RGB_SAI  &rgb_ug RGB_EFF  &none                          &none  &none  &none  &none  &none
 &none              &rgb_ug RGB_BRD  &rgb_ug RGB_BRI  &none            &none            &none            &none                          &none  &none  &none  &none  &none
 &none              &kp K_UNDO       &kp K_CUT        &kp K_COPY       &kp K_PASTE      &studio_unlock   &rgb_ug RGB_TOG  &none  &none  &none  &none  &none  &none  &none
-                                    &none            &none            &none            &none            &none            &none  &none  &none  &none  &none
+                                    &none            &none            &none            &none            &none            &none  &none  &none  &none  &to 0
             >;
         };
 
