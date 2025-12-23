@@ -109,24 +109,6 @@
 
             tapping-term-ms = <190>;
         };
-
-        TD_q_league: TD_q_league {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TD_Q_LEAGUE";
-            #binding-cells = <0>;
-            bindings = <&kp Q>, <&to 3>;
-
-            tapping-term-ms = <215>;
-        };
-
-        TD_w_dev: TD_w_dev {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TD_W_DEV";
-            #binding-cells = <0>;
-            bindings = <&kp W>, <&to 4>;
-
-            tapping-term-ms = <214>;
-        };
     };
 
     combos {
@@ -153,7 +135,7 @@
 
             bindings = <
 &kp ESCAPE    &kp NUMBER_1  &kp NUMBER_2  &kp N3    &kp N4     &kp N5                                               &kp N6     &kp N7   &kp N8     &kp N9     &zeroTBDUnderscore  &TD_PLUS_BSLASH_QMARK_GRAVE
-&kp TAB       &TD_q_league  &TD_w_dev     &kp E     &kp R      &kp T                     &kp Y                                 &kp U    &kp I      &kp O      &kp P               &kp LEFT_BRACKET
+&kp TAB       &lt 3 Q       &lt 4 W       &kp E     &kp R      &kp T                     &kp Y                                 &kp U    &kp I      &kp O      &kp P               &kp LEFT_BRACKET
 &kp CAPSLOCK  &kp A         &kp S         &kp D     &kp F      &kp G                     &kp H                                 &kp J    &kp K      &kp L      &kp SEMI            &kp SQT
 &kp LSHFT     &kp Z         &kp X         &kp C     &kp V      &kp B                     &kp C_MUTE     &kp C_PLAY  &kp N      &kp M    &kp COMMA  &kp DOT    &kp FSLH            &kp NON_US_HASH
                             &kp LALT      &kp LGUI  &kp LCTRL  &MO_space_numpad 2 SPACE  &kp BACKSPACE  &kp ENTER   &kp SPACE  &kp DEL  &kp RALT   &kp RCTRL
