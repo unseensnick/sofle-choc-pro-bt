@@ -116,7 +116,7 @@
             #binding-cells = <0>;
             bindings = <&kp Q>, <&to 3>;
 
-            tapping-term-ms = <180>;
+            tapping-term-ms = <215>;
         };
 
         TD_w_dev: TD_w_dev {
@@ -125,7 +125,7 @@
             #binding-cells = <0>;
             bindings = <&kp W>, <&to 4>;
 
-            tapping-term-ms = <180>;
+            tapping-term-ms = <215>;
         };
     };
 
