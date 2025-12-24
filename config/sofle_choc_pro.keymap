@@ -37,16 +37,6 @@
             bindings = <&kp MINUS>, <&kp EQUAL>;
         };
 
-        MO_space_numpad: MO_space_numpad {
-            compatible = "zmk,behavior-hold-tap";
-            label = "MO_SPACE_NUMPAD";
-            bindings = <&mo>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            flavor = "tap-preferred";
-        };
-
         TD_lvl_e_item_3: TD_lvl_e_item_3 {
             compatible = "zmk,behavior-tap-dance";
             label = "TD_LVL_E_ITEM_3";
@@ -115,7 +105,7 @@
         compatible = "zmk,combos";
 
         adjust_layer {
-            bindings = <&to 1>;
+            bindings = <&to 5>;
             key-positions = <28 29>;
         };
     };
@@ -134,11 +124,11 @@
             //               | GUI | ALT  | CTRL | LOWER|  ENTER |  | SPACE | RAISE| CTRL  | ALT   | GUI  |
 
             bindings = <
-&kp ESCAPE    &kp NUMBER_1  &kp NUMBER_2  &kp N3    &kp N4     &kp N5                                               &kp N6     &kp N7   &kp N8     &kp N9     &zeroTBDUnderscore  &TD_PLUS_BSLASH_QMARK_GRAVE
-&kp TAB       &lt 3 Q       &lt 4 W       &kp E     &kp R      &kp T                     &kp Y                                 &kp U    &kp I      &kp O      &kp P               &kp LEFT_BRACKET
-&kp CAPSLOCK  &kp A         &kp S         &kp D     &kp F      &kp G                     &kp H                                 &kp J    &kp K      &kp L      &kp SEMI            &kp SQT
-&kp LSHFT     &kp Z         &kp X         &kp C     &kp V      &kp B                     &kp C_MUTE     &kp C_PLAY  &kp N      &kp M    &kp COMMA  &kp DOT    &kp FSLH            &kp NON_US_HASH
-                            &kp LALT      &kp LGUI  &kp LCTRL  &MO_space_numpad 2 SPACE  &kp BACKSPACE  &kp ENTER   &kp SPACE  &kp DEL  &kp RALT   &kp RCTRL
+&kp ESCAPE    &kp NUMBER_1  &kp NUMBER_2  &kp N3    &kp N4     &kp N5                                  &kp N6     &kp N7   &kp N8     &kp N9     &zeroTBDUnderscore  &TD_PLUS_BSLASH_QMARK_GRAVE
+&kp TAB       &kp Q         &kp W         &kp E     &kp R      &kp T        &kp Y                                 &kp U    &kp I      &kp O      &kp P               &kp LEFT_BRACKET
+&kp CAPSLOCK  &kp A         &kp S         &kp D     &kp F      &kp G        &kp H                                 &kp J    &kp K      &kp L      &kp SEMI            &kp SQT
+&kp LSHFT     &kp Z         &kp X         &kp C     &kp V      &kp B        &kp C_MUTE     &kp C_PLAY  &kp N      &kp M    &kp COMMA  &kp DOT    &kp FSLH            &kp NON_US_HASH
+                            &kp LALT      &kp LGUI  &kp LCTRL  &lt 2 SPACE  &kp BACKSPACE  &kp ENTER   &kp SPACE  &kp DEL  &kp RALT   &kp RCTRL
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp C_PREV C_NEXT>;
@@ -200,16 +190,26 @@
         dev_layer {
             display-name = "dev";
             bindings = <
-&TD_esc_tilde  &kp N1  &kp N2    &kp N3    &kp N4     &kp N5                                               &kp N6     &kp N7   &kp N8     &kp N9   &kp N0             &TD_PLUS_BSLASH_QMARK_GRAVE
-&kp TAB        &kp Q   &kp W     &kp E     &kp R      &kp T                     &kp Y                                 &kp U    &kp I      &kp O    &kp P              &TD_hash_bracket
-&kp CLCK       &kp A   &kp S     &kp D     &kp F      &kp G                     &kp H                                 &kp J    &kp K      &kp L    &TD_LPAREN_LBRACE  &TD_RPAREN_RBRACE
-&kp LSHFT      &kp Z   &kp X     &kp C     &kp V      &kp B                     &kp C_MUTE     &kp C_PLAY  &kp N      &kp M    &kp COMMA  &kp DOT  &kp FSLH           &TD_LT_GT
-                       &kp LALT  &kp LGUI  &kp LCTRL  &MO_space_numpad 2 SPACE  &kp BACKSPACE  &kp ENTER   &kp SPACE  &kp DEL  &kp RALT   &to 0
+&TD_esc_tilde  &kp N1  &kp N2    &kp N3    &kp N4     &kp N5                                  &kp N6     &kp N7   &kp N8     &kp N9   &kp N0             &TD_PLUS_BSLASH_QMARK_GRAVE
+&kp TAB        &kp Q   &kp W     &kp E     &kp R      &kp T        &kp Y                                 &kp U    &kp I      &kp O    &kp P              &TD_hash_bracket
+&kp CLCK       &kp A   &kp S     &kp D     &kp F      &kp G        &kp H                                 &kp J    &kp K      &kp L    &TD_LPAREN_LBRACE  &TD_RPAREN_RBRACE
+&kp LSHFT      &kp Z   &kp X     &kp C     &kp V      &kp B        &kp C_MUTE     &kp C_PLAY  &kp N      &kp M    &kp COMMA  &kp DOT  &kp FSLH           &TD_LT_GT
+                       &kp LALT  &kp LGUI  &kp LCTRL  &lt 2 SPACE  &kp BACKSPACE  &kp ENTER   &kp SPACE  &kp DEL  &kp RALT   &to 0
             >;
 
             sensor-bindings =
                 <&inc_dec_kp C_VOL_DN C_VOL_UP>,
                 <&inc_dec_kp C_PREV C_NEXT>;
+        };
+
+        layer_select {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &to 3   &to 4   &to 1   &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+            >;
         };
     };
 };
