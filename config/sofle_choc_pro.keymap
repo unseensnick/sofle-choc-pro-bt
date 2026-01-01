@@ -196,11 +196,25 @@
         layer_select {
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &to 3   &to 4   &to 1   &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans
+&trans  &to 3   &to 4   &to 6   &to 1   &trans  &trans                  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
                 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
             >;
+        };
+
+        fps_layer {
+            bindings = <
+&kp ESC    &kp N1  &kp N2    &kp N3    &kp N4     &kp N5                             &kp N6     &kp N7   &kp N8     &kp N9   &kp N0    &kp EQUAL
+&kp TAB    &kp Q   &kp W     &kp E     &kp R      &kp T      &kp Y                              &kp U    &kp I      &kp O    &kp P     &kp LBKT
+&kp CAPS   &kp A   &kp S     &kp D     &kp F      &kp G      &kp H                              &kp J    &kp K      &kp L    &kp SEMI  &kp APOS
+&kp LSHFT  &kp Z   &kp X     &kp C     &kp V      &kp B      &kp C_MUTE  &kp C_PLAY  &kp N      &kp M    &kp COMMA  &kp DOT  &kp FSLH  &kp NON_US_HASH
+                   &kp BSPC  &kp LGUI  &kp LCTRL  &kp SPACE  &kp LALT    &kp ENTER   &kp SPACE  &kp DEL  &kp RALT   &to 0
+            >;
+
+            sensor-bindings =
+                <&inc_dec_kp C_VOL_DN C_VOLUME_UP>,
+                <&inc_dec_kp C_PREVIOUS C_NEXT>;
         };
     };
 };
