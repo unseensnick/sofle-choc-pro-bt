@@ -196,7 +196,7 @@
         layer_select {
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &to 3   &to 4   &to 6   &to 1   &trans  &trans                  &trans  &trans  &trans  &trans  &trans
+&trans  &to 3   &to 4   &to 6   &to 1   &to 7   &trans                  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
                 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
@@ -214,6 +214,20 @@
 
             sensor-bindings =
                 <&inc_dec_kp C_VOL_DN C_VOLUME_UP>,
+                <&inc_dec_kp C_PREVIOUS C_NEXT>;
+        };
+
+        VN-Layer {
+            bindings = <
+&kp ESCAPE  &none     &none         &none         &none      &none                                 &none      &none    &none          &none  &none  &none
+&kp TAB     &kp LEFT  &kp UP_ARROW  &kp DOWN      &kp RIGHT  &none      &none                                 &none    &none          &none  &none  &none
+&none       &kp A     &kp W         &kp S         &kp D      &none      &kp H                                 &none    &none          &none  &none  &none
+&none       &none     &none         &none         &none      &none      &kp C_MUTE     &kp C_PLAY  &none      &kp M    &none          &none  &none  &none
+                      &kp LEFT_ALT  &kp LEFT_GUI  &kp LCTRL  &kp SPACE  &kp BACKSPACE  &kp ENTER   &kp SPACE  &kp DEL  &kp RIGHT_ALT  &to 0
+            >;
+
+            sensor-bindings =
+                <&inc_dec_kp C_VOL_DN C_VOL_UP>,
                 <&inc_dec_kp C_PREVIOUS C_NEXT>;
         };
     };
